@@ -268,4 +268,22 @@ class FacePlusPlus
             $this->getImageInputType($image) => $image,
         ]);
     }
+
+    /**
+     * Get all FaceSet
+     *
+     * @param  integer $start
+     * @param  String  $tags
+     * @return array
+     */
+    public function allFaceSets($start = 1, $tags = null)
+    {
+        $params['start'] = $start;
+
+        if (!empty($tags)) {
+            $params['tags'] = $tags;
+        }
+
+        return $this->request('getfacesets', $params);
+    }
 }
