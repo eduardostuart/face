@@ -1,6 +1,6 @@
 <?php
 
-namespace Face;
+namespace Face\Providers;
 
 use Face\FacePlusPlus;
 use Illuminate\Support\ServiceProvider;

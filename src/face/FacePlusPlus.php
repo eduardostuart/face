@@ -193,8 +193,7 @@ class FacePlusPlus
         $faceTokens= null,
         $userData = null,
         $forceMerge = false
-    )
-    {
+    ) {
         $params = [];
         $params['display_name'] = empty($name) ? null : $name;
         $params['outer_id'] = empty($outerId) ? null : $outerId;
@@ -235,8 +234,10 @@ class FacePlusPlus
     {
         $tokens = [];
 
-        foreach($faces as $face) {
-            if (count($tokens) >= $limit) break;
+        foreach ($faces as $face) {
+            if (count($tokens) >= $limit) {
+                break;
+            }
 
             $tokens[] = $face['face_token'];
         }
