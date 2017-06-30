@@ -5,6 +5,7 @@ namespace Face;
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
 use GuzzleHttp\Psr7\Response;
+use Illuminate\Support\Collection;
 
 class FacePlusPlus
 {
@@ -143,7 +144,9 @@ class FacePlusPlus
      */
     protected function response(Response $response)
     {
-        return json_decode($response->getBody(), true);
+        $items = json_decode($response->getBody(), true);
+
+        return new Collection($items);
     }
 
     /**
