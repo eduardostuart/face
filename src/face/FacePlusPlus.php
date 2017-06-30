@@ -284,6 +284,6 @@ class FacePlusPlus
             $params['tags'] = $tags;
         }
 
-        return $this->request('getfacesets', $params);
+        return $this->request('faceset/getfacesets', $params);
     }
 }
