@@ -27,8 +27,17 @@ class FacePlusPlus
      */
     protected $guzzle;
 
+    /**
+     * Face++ Api Key
+     *
+     * @var String
+     */
     protected $apiKey;
 
+    /**
+     * Face++ Api Secret
+     * @var String
+     */
     protected $apiSecret;
 
     public function __construct($apiKey, $apiSecret, $guzzle = [])
