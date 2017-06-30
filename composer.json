@@ -4,7 +4,6 @@
     "type": "library",
     "require": {
         "guzzlehttp/guzzle": "^6.3",
-        "illuminate/http": "^5.4",
         "illuminate/support": "^5.4"
     },
     "require-dev": {

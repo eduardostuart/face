@@ -1,6 +1,6 @@
 <?php
 
-namespace Face;
+namespace Face\Providers;
 
 use Face\FacePlusPlus;
 use Illuminate\Support\ServiceProvider;
@@ -14,7 +14,7 @@ class FaceServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $source = realpath(__DIR__.'/../config/face.php');
+        $source = realpath(__DIR__.'/../../config/face.php');
         $this->publishes([$source => config_path('face.php')]);
         $this->mergeConfigFrom($source, 'face');
     }
