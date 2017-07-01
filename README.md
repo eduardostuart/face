@@ -19,26 +19,26 @@ Face is open-sourced software licensed under the [MIT license](http://opensource
 To get started with Face, use Composer to add the package to your project's dependencies:
 
 ```bash
-    composer require eduardostuart/face
+composer require eduardostuart/face
 ```
 
 
 Once installed, you need to register the `Face Service` provider in your `config/app.php`.
 
 ```php
-    return [
-        // ....
-        Face\Providers\FaceServiceProvider::class,
-    ]
+return [
+    // ....
+    Face\Providers\FaceServiceProvider::class,
+]
 ```
 
 If you want to use `Face Facade`, you can also add:
 
 ```php
-    return [
-        // ....
-        'Face' => Face\Facades\Face::class,
-    ]
+return [
+    // ....
+    'Face' => Face\Facades\Face::class,
+]
 ```
 
 ## Configuration
@@ -46,7 +46,7 @@ If you want to use `Face Facade`, you can also add:
 Laravel Face uses Face++ api. To setup credentials you'll need to publish `Face` configuration file.
 
 ```php
-    php artisan vendor:publish --provider="Face\Providers\FaceServiceProvider"
+php artisan vendor:publish --provider="Face\Providers\FaceServiceProvider"
 ```
 
 Add Face++ credentials in `face.php` or add into `.env` file.
