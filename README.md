@@ -1,3 +1,5 @@
+<p align="center"><img src=".github/face-logo.png"></p>
+
 ## Introduction
 
 
