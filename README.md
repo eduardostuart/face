@@ -1,5 +1,9 @@
 <p align="center"><img src=".github/face-logo.png"></p>
 
+<p align="center">
+    <img src="https://circleci.com/gh/eduardostuart/face.svg?style=shield&circle-token=7c0f8d59ceab88bb5ca8d50064401b664589961e">
+</p>
+
 ## Introduction
 
 
@@ -13,5 +17,4 @@ To get started with Face, use Composer to add the package to your project's depe
 
     composer require eduardostuart/face
 
-### Configuration
 
