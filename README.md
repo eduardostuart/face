@@ -5,6 +5,7 @@
         <img src="https://circleci.com/gh/eduardostuart/face.svg?style=shield&circle-token=7c0f8d59ceab88bb5ca8d50064401b664589961e">
     </a>
     <img src="https://scrutinizer-ci.com/g/eduardostuart/face/badges/quality-score.png?b=master">
+    <img src="https://poser.pugx.org/eduardostuart/face/license">
 </p>
 
 ## Introduction
@@ -20,8 +21,8 @@
    1. [Compare api](#compare)
    1. [FaseSet (collection of faces)](#faceset-collection-of-faces)
    1. [Search api](#search)
-1. [Credits](#credits)
 1. [License](#license)
+1. [Credits](#credits)
 
 
 ## Installation
@@ -131,10 +132,10 @@ $results = Face::search($faceSetId, 'https://.../photo.jpg');
 
 more information about [Search API](https://console.faceplusplus.com/documents/5681455)
 
-## Credits
-
-Vector Face icon created by [Antonis Makriyannis](https://thenounproject.com/search/?q=face%20recognition&i=143017).
-
 ## License
 
 Face is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+
+## Credits
+
+Vector Face icon created by [Antonis Makriyannis](https://thenounproject.com/search/?q=face%20recognition&i=143017).
