@@ -8,6 +8,7 @@
 
 ## Introduction
 
+Face is a laravel package
 
 ## License
 
@@ -19,4 +20,8 @@ To get started with Face, use Composer to add the package to your project's depe
 
     composer require eduardostuart/face
 
+
+## Credits
+
+1. Vector Face icon created by [Antonis Makriyannis](https://thenounproject.com/search/?q=face%20recognition&i=143017).
 
