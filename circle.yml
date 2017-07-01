@@ -1,0 +1,12 @@
+machine:
+  php:
+    version: 7.1.0
+
+dependencies:
+  pre:
+    - rm /opt/circleci/php/$(phpenv global)/etc/conf.d/xdebug.ini
+    - composer install --prefer-dist --no-interaction
+
+test:
+  override:
+    - ./vendor/bin/phpunit --verbose
