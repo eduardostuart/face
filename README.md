@@ -1,7 +1,9 @@
 <p align="center"><img src=".github/face-logo.png"></p>
 
 <p align="center">
-    <img src="https://circleci.com/gh/eduardostuart/face.svg?style=shield&circle-token=7c0f8d59ceab88bb5ca8d50064401b664589961e">
+    <a href="https://circleci.com/gh/eduardostuart/face">
+        <img src="https://circleci.com/gh/eduardostuart/face.svg?style=shield&circle-token=7c0f8d59ceab88bb5ca8d50064401b664589961e">
+    </a>
 </p>
 
 ## Introduction
