@@ -22,8 +22,7 @@ To get started with Face, use Composer to add the package to your project's depe
 composer require eduardostuart/face
 ```
 
-
-Once installed, you need to register the `Face Service` provider in your `config/app.php`.
+Once installed, you need to register the `Face Service provider` in your `config/app.php`.
 
 ```php
 return [
