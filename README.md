@@ -59,15 +59,64 @@ FACEPLUS_API_SECRET=xxxx
 Detect and analyzes human faces.
 
 ```php
-<?php
 // ...
 use Face\Facades\Face;
 
 $results = Face::detectFaces('https://.../photo.jpg');
 ```
-More information about [Detect Api](https://console.faceplusplus.com/documents/5679127).
+
+more information about [Detect API](https://console.faceplusplus.com/documents/5679127).
 
 
+### Compare
+
+Compare two faces.
+
+```php
+// ...
+use Face\Facades\Face;
+
+$results = Face::compare('https://.../photo.jpg', 'https://.../photo2.jpg');
+```
+
+more information about [Compare API](https://console.faceplusplus.com/documents/5679308)
+
+## FaceSet (collection of faces)
+
+Create a face collection.
+
+```php
+// ...
+use Face\Facades\Face;
+
+// $name = null;
+// $outerId = null;
+// $tags = null;
+// $faceTokens= null;
+// $userData = null;
+// $forceMerge = false
+// Face::createFaceSet($name, $outerId, $tags, $faceTokens, $userData, $forceMerge);
+
+$results = Face::createFaceSet();
+```
+
+
+### Search
+
+Find one or more similar faces from `FaceSet` ("collection of faces").
+
+
+```php
+// ...
+use Face\Facades\Face;
+
+$faceSetId = 'xxxxx';
+
+$results = Face::search($faceSetId, 'https://.../photo.jpg');
+```
+
+
+more information about [Search API](https://console.faceplusplus.com/documents/5681455)
 
 ## Credits
 
