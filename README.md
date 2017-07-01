@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Face is a laravel package
+
 
 ## Installation
 
@@ -53,6 +53,20 @@ FACEPLUS_API_SECRET=xxxx
 ``` 
 
 ## How to use
+
+### Detect
+
+Detect and analyzes human faces.
+
+```php
+<?php
+// ...
+use Face\Facades\Face;
+
+$results = Face::detectFaces('https://.../photo.jpg');
+```
+More information about [Detect Api](https://console.faceplusplus.com/documents/5679127).
+
 
 
 ## Credits
