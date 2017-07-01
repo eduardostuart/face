@@ -16,10 +16,10 @@
 1. [Installation](#installation)
 1. [Configuration](#configuration)
 1. [How to use](#how-to-use)
-   1. [Detect api](#detect-api)
-   1. [Compare api](#compare-api)
+   1. [Detect api](#detect)
+   1. [Compare api](#compare)
    1. [FaseSet (collection of faces)](#faceset-collection-of-faces)
-   1. [Search api](#search-api)
+   1. [Search api](#search)
 1. [Credits](#credits)
 1. [License](#license)
 
