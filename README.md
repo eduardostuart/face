@@ -4,15 +4,12 @@
     <a href="https://circleci.com/gh/eduardostuart/face">
         <img src="https://circleci.com/gh/eduardostuart/face.svg?style=shield&circle-token=7c0f8d59ceab88bb5ca8d50064401b664589961e">
     </a>
+    <img src="https://scrutinizer-ci.com/g/eduardostuart/face/badges/quality-score.png?b=master">
 </p>
 
 ## Introduction
 
 Face is a laravel package
-
-## License
-
-Face is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
 
 ## Installation
 
@@ -60,5 +57,8 @@ FACEPLUS_API_SECRET=xxxx
 
 ## Credits
 
-1. Vector Face icon created by [Antonis Makriyannis](https://thenounproject.com/search/?q=face%20recognition&i=143017).
+Vector Face icon created by [Antonis Makriyannis](https://thenounproject.com/search/?q=face%20recognition&i=143017).
 
+## License
+
+Face is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
