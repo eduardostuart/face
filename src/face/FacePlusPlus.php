@@ -147,7 +147,7 @@ class FacePlusPlus
     {
         $url = $this->buildUrl($resource);
 
-        $reponse = $this->httpClient()->request($method, $url, [
+        $response = $this->httpClient()->request($method, $url, [
             'form_params' => $this->buildParams($params)
         ]);
 
