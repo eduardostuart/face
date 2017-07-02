@@ -3,9 +3,10 @@
 namespace Face;
 
 use GuzzleHttp\Client;
+use Face\FaceCollection;
 use Illuminate\Http\Request;
+use InvalidArgumentException;
 use GuzzleHttp\Psr7\Response;
-use Illuminate\Support\Collection;
 
 class FacePlusPlus
 {
@@ -41,7 +42,7 @@ class FacePlusPlus
      */
     protected $apiSecret;
 
-    public function __construct($apiKey, $apiSecret, $guzzle = [])
+    public function __construct($apiKey = null, $apiSecret = null, $guzzle = [])
     {
         $this->apiKey = $apiKey;
         $this->apiSecret = $apiSecret;
@@ -76,6 +77,24 @@ class FacePlusPlus
     }
 
     /**
+     * Get configuration keys
+     *
+     * @throws InvalidArgumentException if keys are empty
+     * @return array
+     */
+    protected function getConfig()
+    {
+        if (empty($this->apiKey) || empty($this->apiSecret)) {
+            throw new InvalidArgumentException('You must specify the Face++ api key and secret');
+        }
+
+        return [
+            'api_key' => $this->apiKey,
+            'api_secret' => $this->apiSecret,
+        ];
+    }
+
+    /**
      * Build form params
      *
      * @param  array  $params
@@ -83,10 +102,7 @@ class FacePlusPlus
      */
     protected function buildParams(array $params = [])
     {
-        return array_merge([
-            'api_key' => $this->apiKey,
-            'api_secret' => $this->apiSecret,
-        ], $params);
+        return array_merge($this->getConfig(), $params);
     }
 
     /**
@@ -127,26 +143,28 @@ class FacePlusPlus
      * @param  array  $params
      * @return array
      */
-    protected function request($resource, $params = [])
+    protected function request($method, $resource, $params = [])
     {
         $url = $this->buildUrl($resource);
 
-        return $this->response($this->httpClient()->post($url, [
+        $reponse = $this->httpClient()->request($method, $url, [
             'form_params' => $this->buildParams($params)
-        ]));
+        ]);
+
+        return $this->buildResponse($response);
     }
 
     /**
-     * Parse response
+     * Build response
      *
      * @param  Response $response
      * @return array
      */
-    protected function response(Response $response)
+    protected function buildResponse(Response $response)
     {
         $items = json_decode($response->getBody(), true);
 
-        return new Collection($items);
+        return new FaceCollection($items);
     }
 
     /**
@@ -157,7 +175,7 @@ class FacePlusPlus
      */
     public function detectFaces($image)
     {
-        return $this->request('detect', [$this->getImageInputType($image) => $image]);
+        return $this->request('POST', 'detect', [$this->getImageInputType($image) => $image]);
     }
 
     /**
@@ -169,7 +187,7 @@ class FacePlusPlus
      */
     public function compare($imageA, $imageB)
     {
-        return $this->request('compare', [
+        return $this->request('POST', 'compare', [
             $this->getImageInputType($imageA) . '1' => $imageA,
             $this->getImageInputType($imageB) . '2' => $imageB
         ]);
@@ -202,23 +220,23 @@ class FacePlusPlus
         $params['user_data'] = empty($userData) ? null : $userData;
         $params['force_merge'] = $forceMerge ? 1 : 0;
 
-        return $this->request('faceset/create', $this->buildParams($params));
+        return $this->request('POST', 'faceset/create', $this->buildParams($params));
     }
 
     /**
      * Add new face into an existing FaceSet
      *
-     * @param String $faceSet
+     * @param String $faceSetId
      * @param String $image
      */
-    public function addFace($faceSet, $image)
+    public function addFace($faceSetId, $image)
     {
         $response = $this->detectFaces($image);
 
         $tokens = $this->getFaceTokens($response['faces']);
 
-        return $this->request('faceset/addface', [
-            'faceset_token' => $faceSet,
+        return $this->request('POST', 'faceset/addface', [
+            'faceset_token' => $faceSetId,
             'face_tokens' => $tokens
         ]);
     }
@@ -253,7 +271,7 @@ class FacePlusPlus
      */
     public function getFaceSet($faceSetId)
     {
-        return $this->request('faceset/getdetail', [
+        return $this->request('POST', 'faceset/getdetail', [
             'faceset_token' => $faceSetId,
         ]);
     }
@@ -267,7 +285,7 @@ class FacePlusPlus
      */
     public function search($faceSetId, $image)
     {
-        return $this->request('search', [
+        return $this->request('POST', 'search', [
             'faceset_token' => $faceSetId,
             $this->getImageInputType($image) => $image,
         ]);
@@ -288,6 +306,6 @@ class FacePlusPlus
             $params['tags'] = $tags;
         }
 
-        return $this->request('faceset/getfacesets', $params);
+        return $this->request('POST', 'faceset/getfacesets', $params);
     }
 }
