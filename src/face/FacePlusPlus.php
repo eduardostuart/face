@@ -17,13 +17,6 @@ class FacePlusPlus
     protected $httpClient;
 
     /**
-     * Custom parameters
-     *
-     * @var array
-     */
-    protected $parameters;
-
-    /**
      * Guzzle custom configuration options
      * @var array
      */
