@@ -1,10 +1,9 @@
 <?php
 
-namespace Face;
+namespace Face\Collections;
 
 use Illuminate\Support\Collection;
 
 class FaceCollection extends Collection
 {
-
 }

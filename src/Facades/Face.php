@@ -2,6 +2,7 @@
 
 namespace Face\Facades;
 
+use Face\Contracts\Factory;
 use Illuminate\Support\Facades\Facade;
 
 class Face extends Facade
@@ -13,6 +14,6 @@ class Face extends Facade
      */
     protected static function getFacadeAccessor()
     {
-        return 'face';
+        return Factory::class;
     }
 }

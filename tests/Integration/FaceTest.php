@@ -1,11 +1,12 @@
 <?php
 
-namespace Face\Tests\Facades;
+namespace Face\Tests\Integration;
 
+use Face\FaceManager;
+use Face\Facades\Face;
+use Face\Contracts\Factory;
 use Face\Tests\AbstractTestCase;
 use GrahamCampbell\TestBenchCore\FacadeTrait;
-use Face\Facades\Face;
-use Face\FacePlusPlus;
 
 class FaceTest extends AbstractTestCase
 {
@@ -18,8 +19,9 @@ class FaceTest extends AbstractTestCase
      */
     protected function getFacadeAccessor()
     {
-        return 'face';
+        return Factory::class;
     }
+
     /**
      * Get the facade class.
      *
@@ -29,6 +31,7 @@ class FaceTest extends AbstractTestCase
     {
         return Face::class;
     }
+
     /**
      * Get the facade root.
      *
@@ -36,6 +39,6 @@ class FaceTest extends AbstractTestCase
      */
     protected function getFacadeRoot()
     {
-        return FacePlusPlus::class;
+        return FaceManager::class;
     }
 }

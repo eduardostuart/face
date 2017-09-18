@@ -2,8 +2,8 @@
 
 namespace Face\Tests;
 
+use Face\FaceServiceProvider;
 use GrahamCampbell\TestBench\AbstractPackageTestCase;
-use Face\Providers\FaceServiceProvider;
 
 abstract class AbstractTestCase extends AbstractPackageTestCase
 {
