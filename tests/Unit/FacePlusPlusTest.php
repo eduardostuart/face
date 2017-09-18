@@ -67,7 +67,7 @@ class FacePlusPlusTest extends BaseUnitTestCase
     }
 
     /** @test */
-    public function face_plus_plus_always_should_return_a_facecollection_if_detect_faces_response_is_empty()
+    public function face_plus_plus_should_always_return_a_face_collection_if_detect_response_is_empty()
     {
         $provider = $this->provider();
 
@@ -116,7 +116,7 @@ class FacePlusPlusTest extends BaseUnitTestCase
     }
 
     /** @test */
-    public function face_plus_plus_always_should_return_a_facecollection_if_face_attributes_response_is_empty()
+    public function face_plus_plus_should_always_return_a_face_collection_if_face_attributes_response_is_empty()
     {
         $provider = $this->provider();
 
@@ -224,7 +224,7 @@ class FacePlusPlusTest extends BaseUnitTestCase
     }
 
     /** @test */
-    public function face_plus_plus_can_create_a_new_album()
+    public function face_plus_plus_can_create_an_album()
     {
         $provider = $this->provider();
 
@@ -329,7 +329,7 @@ class FacePlusPlusTest extends BaseUnitTestCase
     }
 
     /** @test */
-    public function face_plus_plus_should_return_false_if_album_doesnt_exist_on_faceplusplus()
+    public function face_plus_plus_should_return_false_if_album_doesnt_exist()
     {
         $provider = $this->provider();
 
