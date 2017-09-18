@@ -36,7 +36,7 @@
 
 ## Installation
 
-To get started with Face, use Composer to add the package to your project's dependencies:
+To get the latest version, require the project using composer:
 
 ```bash
 composer require eduardostuart/face
@@ -51,7 +51,7 @@ return [
 ]
 ```
 
-If you want to use `Face Facade`, you can also add:
+And add Face Facade into config/app.php.
 
 ```php
 return [
