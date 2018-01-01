@@ -11,9 +11,7 @@
     <img src="https://poser.pugx.org/eduardostuart/face/license">
 </p>
 
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/4Hs1bT3XQBqUuDEZEAv6t4Ug/eduardostuart/face'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/4Hs1bT3XQBqUuDEZEAv6t4Ug/eduardostuart/face.svg' />
-</a>
+
 
 ## Introduction
 
