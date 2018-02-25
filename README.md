@@ -12,10 +12,6 @@
 </p>
 
 
-
-## Introduction
-
-
 ## Table of contents
 
 
