@@ -1,42 +1,44 @@
 {
-    "name": "eduardostuart/face",
-    "keywords": ["face detection"],
-    "type": "library",
-    "require": {
-        "php": ">=5.6.4",
-        "guzzlehttp/guzzle": "^6.3",
-        "illuminate/support": "5.4.* || 5.5.* ||  7.*"
-    },
-    "require-dev": {
-        "graham-campbell/testbench": "^3.4",
-        "mockery/mockery": "~0.9",
-        "phpunit/phpunit": "~4.0|~5.0"
-    },
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "Eduardo Stuart",
-            "email": "hi@s.tuart.me"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "Face\\": "src/"
-        }
-    },
-    "autoload-dev": {
-        "psr-4": {
-            "Face\\Tests\\": "tests/"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-master": "1.0-dev"
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "eduardostuart/face",
+  "keywords": [
+    "face detection"
+  ],
+  "type": "library",
+  "require": {
+    "php": ">=5.6.4",
+    "guzzlehttp/guzzle": "^6.3",
+    "illuminate/support": "5.4.* || 5.5.* ||  7.*"
+  },
+  "require-dev": {
+    "graham-campbell/testbench": "^3.4",
+    "mockery/mockery": "~0.9",
+    "phpunit/phpunit": "~4.0|~5.0"
+  },
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Eduardo Stuart",
+      "email": "hi@s.tuart.me"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Face\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Face\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }
