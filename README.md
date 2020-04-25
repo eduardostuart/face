@@ -4,10 +4,6 @@
     <a href="https://circleci.com/gh/eduardostuart/face">
         <img src="https://circleci.com/gh/eduardostuart/face.svg?style=shield&circle-token=7c0f8d59ceab88bb5ca8d50064401b664589961e">
     </a>
-    <a href="https://styleci.io/repos/95909712">
-        <img src="https://styleci.io/repos/95909712/shield?branch=master">
-    </a>
-    <img src="https://scrutinizer-ci.com/g/eduardostuart/face/badges/quality-score.png?b=master">
     <img src="https://poser.pugx.org/eduardostuart/face/license">
 </p>
 
